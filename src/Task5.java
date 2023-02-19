@@ -9,7 +9,7 @@ public class Task5 {
      * Masalan 6,28
      */
     public static void main(String[] args) {
-        // Bu masala Samandar ishlagan masala bilan birlashtirildi
+        // Bu masala Samandar Abduvaliev ishlagan masala bilan birlashtirildi
 
         Scanner scanner = new Scanner(System.in);
 
