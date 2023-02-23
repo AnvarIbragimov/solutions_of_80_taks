@@ -2,15 +2,15 @@ package misollar_31_40;
 
 import java.util.Scanner;
 
-public class Task32 {
+public class Task33 {
 
     /**
      * monthDays(year, month) funksiyasidan foydalangan holda prevDate(d,m,y) funksiya yarating
-     * Kiritilgan sanadan bir kun oldingi sanani satr ko'rinishida qaytaradigan funksiya hosil qiling.
+     * Kiritilgan sanadan bir kun keyingi sanani satr ko'rinishida qaytaradigan funksiya hosil qiling.
      */
     public static void main(String[] args) {
 
-        System.out.println("32-masala");
+        System.out.println("33-masala");
 
         Scanner scanner = new Scanner(System.in);
 
@@ -39,8 +39,8 @@ public class Task32 {
                 if (kabisaYilmi) oyOxirgiKuni = 29;
 
                 if (day >= 1 && day <= oyOxirgiKuni) {
-                    if (day == 1) System.out.println("31/1/" + year);
-                    else System.out.println((day - 1) + "/" + month + "/" + year);
+                    if (day == oyOxirgiKuni) System.out.println("1/3/" + year);
+                    else System.out.println((day + 1) + "/" + month + "/" + year);
                 } else System.out.println("Bunday sana yo'q !!!");
 
                 break;
@@ -53,22 +53,11 @@ public class Task32 {
             case 8:
             case 10:
             case 12:
-                // 1-mart holati
-                if (day == 1 && month == 3) {
-                    if (kabisaYilmi) System.out.println("29/2/" + year);
-                    else System.out.println("28/2/" + year);
-                    break;
-                }
-                // 1-avgust holati
-                if (day == 1 && month == 8) {
-                    System.out.println("31/7/" + year);
-                    break;
-                }
-                if (day == 1 && month == 1) System.out.println("31/12/" + (year - 1));
+                if (day == 31 && month == 12) System.out.println("1/1/" + (year + 1));
                 else {
                     if (day <= 31) {
-                        if (day == 1) System.out.println("30/" + (month - 1) + "/" + year);
-                        else System.out.println((day - 1) + "/" + month + "/" + year);
+                        if (day == 31) System.out.println("1/" + (month + 1) + "/" + year);
+                        else System.out.println((day + 1) + "/" + month + "/" + year);
                     } else System.out.println("Bunday sana yo'q !!!");
                 }
 
@@ -80,8 +69,8 @@ public class Task32 {
             case 9:
             case 11:
                 if (day <= 30) {
-                    if (day == 1) System.out.println("31/" + (month - 1) + "/" + year);
-                    else System.out.println((day - 1) + "/" + month + "/" + year);
+                    if (day == 30) System.out.println("1/" + (month + 1) + "/" + year);
+                    else System.out.println((day + 1) + "/" + month + "/" + year);
                 } else System.out.println("Kun xato !!!");
                 break;
             default:
